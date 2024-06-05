@@ -5,6 +5,8 @@ from src.logger import logging
 import pandas as pd
 from sklearn.model_selection import train_test_split
 from dataclasses import dataclass
+from src.components.data_transformation import DataTransformation
+from src.components.data_transformation import DataTransformationConfig
 
 @dataclass
 class DataIngestionConfig:
@@ -25,11 +27,12 @@ class DataIngestion:
             logging.info(f"Current working directory: {current_dir}")
             
             # Use absolute path for the CSV file
-            file_path = os.path.abspath(os.path.join(
+            file_path = os.path.abspath(os.path.join( 
                 'Lesion_Normal_Plantar_Classifier.egg-info', 
                 'notebook', 
                 'data', 
-                'stud.csv'))
+                'stud.csv')
+                )
             logging.info(f"CSV file path: {file_path}")
 
             # Check if the file exists
@@ -61,6 +64,10 @@ class DataIngestion:
         except Exception as e:
             raise CustomerException(e, sys)
 
+
 if __name__ == "__main__":
     obj = DataIngestion()
-    obj.initiate_data_ingestion()
+    train_data, test_data = obj.initiate_data_ingestion()
+
+    data_transformation = DataTransformation()
+    data_transformation.initiate_data_transformation(train_data, test_data)

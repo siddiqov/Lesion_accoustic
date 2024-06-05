@@ -1,0 +1,2166 @@
+hello all my name is krishnaik and
+
+welcome to my YouTube channel so guys we
+
+are into the tutorial 3 uh of this
+
+end-to-end machine learning project
+
+implementation
+
+and if you have not seen tutorial one
+
+tutorial 2 I would suggest please go
+
+through the playlist uh in our previous
+
+tutorial we had actually implemented
+
+about exceptional handling logger for
+
+the entire project right and uh in the
+
+last example one thing that I showed you
+
+right we were trying to raise an
+
+exception and it was not getting stored
+
+in the in the file over here right so
+
+what specifically uh like I asked the
+
+solution for you all right and I'm very
+
+much excited to say that many of you
+
+gave the proper solution why this
+
+exception message was not getting saved
+
+in the logs folder the simple reason was
+
+that I had to probably import the logger
+
+dot py file over here right so inside
+
+this logger right I have to probably
+
+import so if you probably go and see
+
+this logger I have to go ahead and
+
+import this logging from here right so
+
+that is the reason I did not do it uh
+
+and because of that we are not getting
+
+the message saved now what I will do I
+
+will quickly first of all show this so I
+
+will write from uh from SRC dot uh
+
+logger
+
+logger
+
+import login okay so I'm just going to
+
+import this and now you can see
+
+login.info divided by 0 is there now if
+
+I probably go ahead and execute this
+
+python
+
+logger.py sorry exception
+
+uh python exception dot py so you'll be
+
+able to see okay in just a second python
+
+Source exception dot py now here you'll
+
+be able to see that um
+
+division by error or division by zero
+
+the error is basically coming now we
+
+need to see whether this is got saved in
+
+the log file or not now you can see the
+
+third log file is basically created and
+
+here you basically have the entire error
+
+message going over here okay just to
+
+start with uh this was the main issue
+
+that we fixed uh now I hope everybody
+
+will be updating the code whenever they
+
+want to probably use logging they have
+
+to import from source.logger you have to
+
+import the logging part okay
+
+Now quickly let me go ahead and remove
+
+this because I don't require any how
+
+this all things
+
+now what is the agenda of this specific
+
+session
+
+the agenda of this session is that to
+
+talk about the project that we are going
+
+to implement
+
+now I was thinking see
+
+when you are developing an end-to-end
+
+project right the major thing the first
+
+thing the first priority thing that we
+
+really need to think about is that
+
+what kind of data set we should
+
+basically start with okay
+
+so I gave a lot of thought and since
+
+this is just our first project and we
+
+will try to make this project better and
+
+better see guys I have written seven
+
+days live end-to-end machine learning
+
+project but I'm very very happy to
+
+announce now this will not be seven days
+
+okay uh I will continue this series and
+
+probably try to include ml op CI CD
+
+pipeline not only for machine learning
+
+project we'll also go and understand
+
+with respect to NLP deep learning
+
+projects right so uh this will be an
+
+entire series we'll try to make it
+
+better we'll try to always make sure
+
+that if any new techniques if any new uh
+
+things that we can basically implement
+
+it can improve the performance of the
+
+project we can we will also do that okay
+
+and we'll go step by step so I was
+
+thinking about the data set okay so I
+
+hope first of all you like this message
+
+if you like this message please do make
+
+sure that you comment down now we are
+
+going to just focus on Project let it be
+
+with respect to machine learning NLP and
+
+deep learning and we'll try to implement
+
+very very good things I will be creating
+
+lot of documentation for you also so
+
+that you will be able to understand and
+
+trust me any interview that you go you
+
+will be able to crack it okay now as I
+
+said that I gave a lot of thought in
+
+probably just understanding like what
+
+project we should basically go ahead
+
+with if you are a starter if you just
+
+know about edsc some prerequisite is
+
+required you should know Python
+
+programming language you should know
+
+modular coding you should know how to
+
+perform Eda and all okay
+
+now considering this what I've done is
+
+that I've taken a data set and this
+
+entire project is about student
+
+performance indicator now you may be
+
+thinking Chris this is just a simple
+
+project this is a reason why I took this
+
+see understand if I probably show you
+
+the data set of this project okay
+
+so this is the data set of this project
+
+in this project okay
+
+if I close this in this project you will
+
+be finding features of every type
+
+categorical features you'll find
+
+numerical features you'll find nand
+
+values you'll find multiple things right
+
+and then we will try to see to start
+
+with how we can probably solve this how
+
+we can perform the feature engineering
+
+and till now most of the time we have
+
+learned everything in Jupiter notebook
+
+right but that same jupyter notebook
+
+code then we'll try to convert that into
+
+a modular code that is how we are going
+
+to learn it guys trust me if you follow
+
+this strategies tomorrow you get any
+
+kind of data set any kind of project you
+
+will be knowing that what exactly you
+
+need to do okay so for this I have taken
+
+uh the project which is called as
+
+student performance indicator so
+
+initially this is our project and here I
+
+have added one notebook folder inside
+
+this you have this data student.csv and
+
+then I have given you this two files one
+
+is Eda okay and the other one is about
+
+model training okay so let's go and see
+
+what exactly uh we are going to talk in
+
+this specific Eda and all and what all
+
+things we are basically going to do okay
+
+and the best thing about this project is
+
+that I have given each and every
+
+understanding to you over here you know
+
+as I said prerequisite is Eda but I will
+
+just try to execute this and we'll try
+
+to see what all things we are basically
+
+going to do okay
+
+now uh now with respect to Eda now
+
+people will be thinking can we do edn
+
+this the project in dot py file no don't
+
+do that Jupiter notebook is the best way
+
+uh to basically perform the Ed and all
+
+whatever observation see something that
+
+is very much important then whenever you
+
+perform Eda right observation is super
+
+important right and once you do the
+
+observation you have to probably provide
+
+that observation to the stakeholder and
+
+every step that you are probably doing
+
+in your project for that there should be
+
+a reason okay
+
+so in the student performance indicator
+
+this is the entire lifecycle of a
+
+machine learning project understanding
+
+the project statement data collection
+
+data checks to perform Eda data
+
+pre-processing model training and
+
+choosing the best model after that we'll
+
+try to evaluate the model and push the
+
+model that will also be the part of it
+
+now what exactly is the problem
+
+statement just try to understand this
+
+guys this problem statement is very very
+
+good and I have taken this data set for
+
+purpose
+
+as we go ahead and probably try to
+
+participate in some other like Implement
+
+some other project right at that point
+
+of time we will try to put more complex
+
+data set now if you get the idea about
+
+this particular data set trust me you'll
+
+get the idea about implementing
+
+everything
+
+okay so problem statement is that this
+
+project understands how the student
+
+performance test score is affected by
+
+other variables such as Zender ethnicity
+
+parental level of Education lunchtime
+
+preparation course so here you will be
+
+able to see that okay you have a lot of
+
+features okay like gender ethnicity
+
+parental level of Education lunch test
+
+preparation course and many things you
+
+have okay now over here what we are
+
+basically going to do is that
+
+uh we are just going to see how the
+
+students performances with respect to
+
+the test score and based on these
+
+features we'll try to predict the test
+
+core okay and all these features like
+
+some of the features are categorical
+
+features some of the pieces are
+
+numerical features that all will be
+
+seeing okay so that is the entire
+
+project information about it this
+
+basically data set consists of thousand
+
+rows eight columns so that we initially
+
+start with some basic things and then
+
+probably we gain right but again at the
+
+end of the day it is more about
+
+understanding how do we Implement an
+
+end-to-end project okay now to begin
+
+with we'll be importing this libraries
+
+now here as soon as I import I will
+
+first of all uh select my python kernel
+
+okay so let me just go ahead and so this
+
+will be my python environment I've
+
+already made v e and V python 3.8 so
+
+you'll also be getting this option now
+
+you can see it is connecting to the
+
+kernel I will just go ahead and install
+
+this
+
+kernel is basically required for
+
+implementing or executing any code in
+
+The jupyter Notebook okay and what is
+
+the folded structure that I have done
+
+see outside the source right I have made
+
+this notebook then data is there Eda is
+
+there model training so whatever
+
+analysis and whatever model training
+
+you'll do right you'll do it over here
+
+now in model training what all
+
+techniques you have specifically used
+
+what we are going to do over there we
+
+are basically going to convert that into
+
+a model coding that is what we are going
+
+to do now quickly let's go ahead and see
+
+some Eda right now the installation is
+
+taking place and this will probably take
+
+some amount of time okay so till then um
+
+I hope you are able to understand the
+
+project see guys the way I really want
+
+to teach is that because once you are
+
+done with this project you will be able
+
+to implement any python project as such
+
+and that is my promise okay not python
+
+only but machine learning also okay so
+
+yes this has got executed now so all
+
+this libraries are basically there like
+
+matplotlib and all it's okay uh let's
+
+see whether it is there in the
+
+requirement.cst or not pandas numpy c
+
+bond I can also write matplotlib okay so
+
+these all libraries we'll try to put it
+
+over here and uh every time when you're
+
+installing this pip install right don't
+
+try to put this because I don't want to
+
+build my package again again we'll build
+
+it at last so try to comment this down
+
+whenever you try to install the package
+
+okay like pip install minus r
+
+requirement.txt perfect uh till here we
+
+are good now let me just go ahead and
+
+open the EDM so this is basically my edn
+
+now I will be reading the data set I've
+
+written all the comments so definitely
+
+you will be able to see show top five
+
+reports what is the shape of the data
+
+set so this is all are simple this is my
+
+data set information like gender sex of
+
+students this this is there and then you
+
+have something like math score reading
+
+score writing score so what are the data
+
+checks to perform first of all we'll
+
+check missing values then we'll check
+
+duplicate values if duplicate values
+
+exist we need to remove it if there are
+
+no missing if there is missing values
+
+with the help of feature engineering
+
+we'll try to replace it if there are
+
+then we'll go ahead and check the data
+
+type number of unique values of each
+
+column statistics of the data set and
+
+then we check various categories present
+
+in the different category columns okay
+
+so here we are going to go ahead and
+
+check missing values right now we will
+
+be having zero in the missing values
+
+trust me if there is any missing values
+
+you can use mean imputation I have
+
+created an Eda playlist over there okay
+
+but again my main focus is to basically
+
+show you how to implement an end-to-end
+
+project okay but as I said this entire
+
+year I'm just going to focus on projects
+
+ml op CI CD so I'll be taking more
+
+complex data set as we go ahead okay
+
+now there is no missing value in the
+
+data set this is the observation now
+
+this is the observation that I am
+
+actually talking about right every time
+
+you really need to write about the
+
+insights and observation then I will go
+
+and see with respect to duplicates
+
+duplicates is not there if duplicate was
+
+there tell me what is the code to delete
+
+the duplicate elements okay so this way
+
+we are able to find out whether
+
+duplicates is there or not like let's
+
+say if there are five to six duplicates
+
+okay how to remove that duplicate just
+
+try to write down the code in the
+
+comment section and then we will go
+
+ahead and see with respect to the info
+
+over here now you may be thinking Krish
+
+why you did not take a data set from
+
+some API and databases don't worry I
+
+will do that okay I Will Show You by
+
+considering this data set or by
+
+considering any API data set how to do
+
+that okay everything I'll be showing but
+
+let's start with something let's gain
+
+your interest let's keep you motivated
+
+by starting some mid to intermediate
+
+level projects and then we will go into
+
+complex one right then checking the
+
+number of values of each column so DF
+
+dot unique you'll be seeing that gender
+
+has two Ray certain city has five
+
+parental level of education has six
+
+lunch has two
+
+and then you have this math score this
+
+this with respect to data type as int
+
+Okay then if you really want to quickly
+
+check the statistics of the data set you
+
+can basically write DF dot describe
+
+there are three numerical features
+
+one is math score reading score and
+
+writing score okay now from the above
+
+the description of the numerical data
+
+all means are very close to each other
+
+so all this information you will be able
+
+to see from this right and that is the
+
+insights that I have actually written so
+
+my suggestion would be that please go
+
+through each and every point you will be
+
+having one day completely because once
+
+we complete this right once we complete
+
+this we will try to entirely convert
+
+this into a modular coding okay not Eda
+
+part but at least the model training
+
+part inside the model training what all
+
+things I am specifically using okay so
+
+here are about more exploring about the
+
+data how many categories are there in
+
+gender how many categories are there in
+
+race ethnicity see guys I've already
+
+created all this kind of videos you can
+
+check out my EDM playlist okay so once I
+
+execute it uh race or authenticity so I
+
+think this will be
+
+race
+
+um
+
+let me just see this
+
+d f Dot
+
+head
+
+so
+
+race underscore ethnicity not or
+
+so it is underscore ethnicity now I
+
+think it will fine and then you have uh
+
+parental level of Education
+
+so some of the variables name is not
+
+there it's okay we'll make it and then
+
+we have lunch lunch is fine then touch
+
+preparation courses okay so this will
+
+basically be my test preparation courses
+
+so these are the changes uh race is also
+
+there
+
+um
+
+okay no worries race race race race
+
+categories in race underscore ethnicity
+
+okay
+
+um
+
+so here are all the features all the
+
+category features like what all values I
+
+specifically have and then we have just
+
+written a condition to probably Define
+
+our numerical and categorical features
+
+so this is what we are getting printed
+
+okay
+
+so see in this particular thing we are
+
+defining on numerical and category
+
+features how we are doing that
+
+feature for feature in DF dot columns
+
+okay if this DF of feature.data type is
+
+not equal to object okay if it is not
+
+equal to object that basically means it
+
+becomes a numerical feature right so
+
+easy it is a generic statement then
+
+similarly feature of a feature in DF dot
+
+columns if DF of feature.data type is is
+
+equal to zero right or is equal to
+
+object then that is basically a
+
+categorical feature so this way we have
+
+done this over here if I really need to
+
+find out how many unique number of
+
+categories are there I've written DF of
+
+gender dot unique right so by that I
+
+will be able to see the name over here
+
+and then it is a normal print statement
+
+so here I will go ahead and execute it I
+
+once I get my numerical and categorical
+
+features all I am doing we are printing
+
+it okay so this is basically this many
+
+number of numerical features are there
+
+and this is all my numerical features
+
+similarity with respect to the
+
+categorical feature now here we have
+
+three numerical features
+
+and match score reading score writing
+
+score and then we have five categorical
+
+features that is gender array ethnicity
+
+parental level of Education lunch and
+
+test preparation course okay everything
+
+is there now this is super important
+
+this is the kind of feature engineering
+
+that we have performing adding columns
+
+for total score and average score okay
+
+now if you probably go and see DF dot
+
+head
+
+let's see the first two records okay DF
+
+dot head with respect to the two records
+
+now here you will be able to see I have
+
+three ma three different scores one is
+
+math score reading score and writing
+
+score now what I will do is that I will
+
+try to do the submission of all this
+
+scores and I will create one variable
+
+which is called as total score this will
+
+basically be my output feature okay and
+
+I can also make sure that I have one
+
+more output feature which is called as
+
+average So based on this feature now I
+
+can solve two problem statement one is
+
+what is the total score right I can
+
+create a model to predict the total
+
+score and then I can create another
+
+model to predict the average score so
+
+that is what we are basically going to
+
+do okay now over here what I am doing
+
+add columns for total score so DF of
+
+math plus d f of reading score and
+
+writing score I'm basically adding it up
+
+right so if I probably see this all are
+
+ah match score or reading score
+
+and writing Square
+
+okay
+
+and then
+
+for this total score if I divide by
+
+three I will be getting my average score
+
+okay that is what we are basically done
+
+so I will go ahead and execute it now
+
+here if you go and see in the DF dot
+
+head you have this right reading score
+
+writing score but here you can see now I
+
+am having total score and average score
+
+very good you have done this step and
+
+now I can probably make this two as my
+
+dependent feature
+
+and probably this all can be my
+
+independent feature and I if I don't
+
+want I don't want this particular
+
+feature also these three features I can
+
+remove it but I'll just keep it just to
+
+find out more additional information
+
+about it okay
+
+but if you perform feature selection
+
+later on we can basically remove it
+
+feature selection I will not perform now
+
+we'll create a basic model and then
+
+we'll try to improvise the model okay
+
+now ah with respect to reading score 100
+
+uh what is the average what is this
+
+everything we are just going to compare
+
+it so see this it's all about a simple
+
+you know we're just trying to see the
+
+number of students with full marks in
+
+maths so how many people have scored
+
+full mass in maths that is seven number
+
+of students is full marks in writing
+
+that is 14. how I have written the
+
+condition DF of writing score is equal
+
+to 100 and then we'll take out the
+
+average dot count that's it okay
+
+and similarly with respect to reading
+
+score writing score if I really want to
+
+find out less than or equal to 20 okay
+
+so they have basically not done anything
+
+you know back benches I was also I have
+
+never been a backbencher but I like
+
+backbenches right they are creative but
+
+with respect to studies they always try
+
+to get a less marks okay that is what I
+
+have observed okay so here I have number
+
+of students with this four three one
+
+less than four okay so what are the
+
+insights that you are able to get from
+
+above values you can see that we got
+
+students have performed the worst in
+
+maths uh best performance in reading
+
+section everything you can basically
+
+find out and then if you want to go
+
+ahead and probably do more visualization
+
+you can use histograms so here also I've
+
+taken average with respect to this data
+
+frame here I have used we as gender
+
+right just to check how my average is
+
+with respect to gender okay now common
+
+question that I can ask you if you
+
+probably check out your college mask
+
+your school nurse based on gender who is
+
+going to perform well write down in the
+
+comment section where male or female I
+
+know the answer you know obviously
+
+female usually perform well in the
+
+college times right so if you see this
+
+this is my left hand side you can see
+
+one graph okay this is the average but
+
+now if I try to see average with respect
+
+to gender like male and female so here
+
+you can see this blue color is basically
+
+female values right and the average
+
+score is basically increasing
+
+right with respect to the female
+
+so this is what it is let's say with
+
+respect to total score also you want to
+
+check you can basically check over here
+
+so I will make a code and instead of
+
+writing average I will say total right
+
+I hope it is total only
+
+um
+
+okay total score
+
+Total Space score okay so this is total
+
+score and the same thing I will copy it
+
+over here and paste it
+
+right a very good Eda now with respect
+
+to total score also you can see that
+
+female are performing well okay so
+
+male or usually ah you know not focused
+
+much on getting much more remarks unless
+
+and until it is not iitjee and some
+
+other things but yeah so fear the inside
+
+is that female students tends to perform
+
+well than male students okay then here I
+
+have seen average with lunch then you
+
+can probably see with respect to female
+
+and male how it is getting performed
+
+with respect to lunch all these graphs
+
+you can basically check it out okay and
+
+then these are the insights that I have
+
+written so all these things are there
+
+definitely go ahead and check it out
+
+okay I've created some of the plots now
+
+this is the Eda as suggested you have to
+
+try it from here and I will give you
+
+sufficient time to basically just go
+
+ahead and probably just execute this
+
+understand the entire idea about this
+
+entire project right very good material
+
+that I've we have created over here as a
+
+team my team was actually involved in
+
+creating this material I told each and
+
+every minute detailed things with
+
+respect to video you have to write it
+
+down and they have basically write it
+
+wrote it down okay now let's go with
+
+respect to the model training Okay so
+
+here first of all I will just write s2d
+
+dot CSV okay
+
+now first first over here I'm getting
+
+some issues with respect to a scalar
+
+okay now a scalar is not important now
+
+see in this particular file what we are
+
+going to do we are going to train our
+
+model and before training a model how I
+
+am going to handle the category features
+
+how I'm going to handle the numerical
+
+feature everything will be available in
+
+this how I am performing how I am
+
+training multiple models how I am
+
+getting the results what all model I am
+
+going to use everything will be here
+
+okay
+
+so first of all the major issue that I
+
+am getting right if I probably execute
+
+this I will get an error okay now what
+
+is the error that I'll get so here also
+
+I have to probably go and connect to the
+
+V and V okay so here you can see sk1 is
+
+not there so guys over here sk1 model is
+
+not there right so what I will do I will
+
+just write pip install
+
+Sky Kid learn
+
+I hope the library is same Sky kit learn
+
+uh Sky kit learn Pi Pi so here you have
+
+this one so what I will do I will take
+
+up this Library
+
+I'll open my vs code go to my
+
+requirement.txt
+
+and give this particular file over here
+
+now I'll just comment it down okay
+
+and I think matplotlib is already
+
+installed so I don't okay let's
+
+go and make this
+
+now what I'm going to do go to my
+
+terminal
+
+okay already I have opened my terminal
+
+with respect to command prompt over here
+
+and now see I have commented this down
+
+because I don't want to build the
+
+package again and again at the end we'll
+
+try to build the package so over here
+
+what I will do first of all I will
+
+install
+
+minus r requirement
+
+requirements.txt
+
+so once I install this you will be able
+
+to see this Partners wonders everything
+
+is getting installed okay and I think we
+
+have installed it earlier also
+
+so all the all the things are basically
+
+getting installed over here once this
+
+installation basically happens now the
+
+sky kit learn installation will also
+
+happen right so once this is completed
+
+then if you probably go over here and
+
+execute this so now you can see the
+
+installation is done now what I'm going
+
+to do go ahead and execute this so let
+
+me close this down and now if I go ahead
+
+and execute it let's see whether we'll
+
+get executed or not or will I still get
+
+the error okay so no model named CAD
+
+boost okay fine so Sky kit learn at
+
+least we are not getting an error so now
+
+the next thing is that we will go ahead
+
+and install the cat post okay so here ah
+
+pip
+
+install
+
+and I will go ahead and write CAD boost
+
+and this is how you have to write each
+
+and every Library okay so pip install
+
+CAD post so we'll just go and see with
+
+respect to the package so here is my cad
+
+boost Library so all I'll do I will go
+
+back again over here
+
+go ahead and comment down in my
+
+requirement.txt
+
+okay now again I will not go ahead and
+
+install everything what I will do here
+
+only I will make a code and here I will
+
+write pip install like this also you can
+
+do the installation but one time you
+
+have to probably go ahead and write this
+
+so let's see whether we'll get an error
+
+over here or whether it will get uh
+
+installed or not so here the
+
+installation is basically taking place I
+
+don't know why we are getting this red
+
+color
+
+okay so I think pip is not installed in
+
+this maybe it can be it cannot be let's
+
+see
+
+okay so let me do one thing let me
+
+interrupt this so file let me interrupt
+
+this no need to execute it from here so
+
+what I will do I will again open the
+
+terminal
+
+okay so see these are the steps why I am
+
+going very slowly and talking about it
+
+because I want you all to follow in this
+
+way
+
+later on I will also show you an
+
+automated way okay
+
+so
+
+requirements.txt so once I execute it so
+
+here you'll be able to see cad boost 12
+
+get installed okay so catboot is Cash
+
+boost is also done so now if I go ahead
+
+and execute it
+
+so now I don't think so okay XG boost is
+
+also there fine no worries
+
+I will again create my requirement.txt
+
+and go ahead and write XG boost okay and
+
+again pip install requirement.txt
+
+so xgboost is also installed now okay so
+
+all those things you have to do the
+
+reason I'm showing you like this I will
+
+not delete all these errors guys see
+
+errors whatever is coming it's for your
+
+learning process so now finally all the
+
+execution is done we are good to go with
+
+respect to all the libraries that we
+
+required see SK loan dot matrix is
+
+required
+
+linear regression then since this is a
+
+regression problem the total score is a
+
+continuous value right so it is a
+
+regression problem so I have used almost
+
+all the libraries and will try to see
+
+which is the best Library you can also
+
+use random Forest okay
+
+um
+
+perfect could not install I think this
+
+should get executed
+
+okay perfect it got executed now we'll
+
+go and read the student.csv file uh it
+
+is basically present inside
+
+the notebook
+
+a CS from where we are reading it
+
+okay I will copy this and paste it over
+
+here
+
+okay done
+
+so we have read it DF dot head so what
+
+we are going to do over here is that c I
+
+can go ahead with match score reading
+
+score writing score whatever things you
+
+want right let's now see the two
+
+additional features that we have created
+
+one was with respect to the total score
+
+and all right I can do that or I can
+
+just directly use this math score and
+
+probably take this feature and my
+
+independent features and try to do the
+
+prediction for this okay
+
+so that is what we are basically doing
+
+uh what I will do is that I will take
+
+all these features this this this as our
+
+independent feature and we'll try to
+
+predict the math score now it is up to
+
+you use total score or average or mean
+
+whatever you want but here in the code I
+
+will be dropping maths underscore score
+
+with the access so this will basically
+
+be my independent feature in my
+
+independent feature if you probably go
+
+and see x dot head
+
+okay so all these are all my features
+
+that I have excluding math score and
+
+then this y will basically be having my
+
+Max code okay perfect so done so if I
+
+probably create the code and see the Y
+
+variable so Y is basically having this
+
+output feature now this is super
+
+important okay super super important one
+
+is
+
+create column Transformer with three
+
+types of Transformers now see guys
+
+you have numerical features so for this
+
+numerical features ah
+
+you have to probably do one not encoding
+
+first of all just go ahead and probably
+
+just write X off okay
+
+and just see see gender was to Ray
+
+certainly city was five and we have
+
+already seen the Ed also like how many
+
+are categorical features how many unique
+
+categorical features were there so let
+
+me just copy that code and again show it
+
+to you so that you will be able to
+
+understand right
+
+yeah this was the code
+
+so here if I try to go ahead and execute
+
+it and see this in gender you have two
+
+categories in race ethnicity you have
+
+this many number of categories in this
+
+you have this many number of categories
+
+in lunch you have to and in test
+
+preparation course you have this two
+
+none and completed okay now see in this
+
+kind of way because there are very less
+
+number of features right very very less
+
+number of features ah inside this the
+
+the categorical variables right has less
+
+number of categories also so what we can
+
+do we can basically perform one hot
+
+encoding now let's consider that there
+
+is another feature which has many many
+
+categorical features then we can do
+
+Target guided ordinal encoding right and
+
+I will also make sure that we'll try to
+
+use that okay as we go ahead but we'll
+
+try to improve the model first we'll
+
+create a basic model and then we'll try
+
+to improve it okay so now I have my wife
+
+I have my all these things now what I've
+
+done
+
+I will create a pipeline now the
+
+pipeline is required because for
+
+numerical I will try to do different ah
+
+not for numerical basically let's say
+
+for categorical features I have in my
+
+data set so first of all I need to
+
+perform one hot encoding for everything
+
+right then let us say with respect to
+
+all the features once it is getting
+
+converted in a numerical feature what
+
+we'll do we'll try to apply
+
+standardization you can apply
+
+normalization so this should be in a
+
+form of pipeline One Step by the other
+
+step so here if you see okay so what I
+
+have done first of all I have taken my
+
+numerical features separately so I have
+
+written x dot select data type exclude
+
+objects dot column so that basically
+
+becomes it becomes a all my numerical
+
+features and if I write x dot select
+
+data types include object dot columns
+
+then that big circle becomes my
+
+categorical feature okay and now what I
+
+have done from a scale on dot
+
+pre-processing import one not encoder
+
+because I have to do that standard
+
+scalar okay now this too when we combine
+
+this as a pipeline right so in short
+
+what is basically happening in those two
+
+right the column transformation will
+
+basically happen so the column
+
+Transformer will combine these two
+
+together one after to the other first
+
+one not encoder should happen and then
+
+standard scalar should happen so this is
+
+all I think you are familiar with right
+
+so SQL under pre-processing import one
+
+hot encoder standard scalar is there
+
+from a scale under compose import column
+
+Transformer is basically there okay so
+
+what I did I initialized standard scalar
+
+I initialize one hot encoder now see one
+
+by one I have combined this as a
+
+pipeline so here you have column
+
+Transformer the first step in the list
+
+will be one hot encoder with this
+
+particular object and for which kind of
+
+features it will be for categorical
+
+features right for categorical features
+
+and then I am applying standard scalar
+
+for numeric by using this numeric
+
+Transformer and for which feature it
+
+will get applied only for the numeric
+
+features right so this way we are able
+
+to get this entire processor right and
+
+this processor will be used later to do
+
+any kind of fit or transform on the any
+
+kind of data set okay in short this
+
+column transform is responsible for
+
+transforming your columns or your data
+
+points okay so once I execute this this
+
+is done okay and now you can see I'm
+
+just doing on fit under transfer One X
+
+so if I do this on X and if I probably
+
+go and see and see my x value here is it
+
+I'm getting my entire array and it is
+
+basically combined it you can see if I
+
+write H dot shape you will be able to
+
+see now I have 19 columns and thousand
+
+records amazing right this is the power
+
+of this column Transformer now see guys
+
+it's not like Basics is not important in
+
+data science basically super important
+
+because all these things only will try
+
+to convert that into a model coding
+
+later on in the next tutorial we'll be
+
+seeing that and you will be quite
+
+impressed at the end already you'll be
+
+thinking it was so easy and we may never
+
+thought how to probably prepare a
+
+end-to-end data science project right
+
+perfect now the next step with respect
+
+to this is that we are going to do train
+
+test split again it's very much simple
+
+to create the train test plate we use
+
+train test plate from a scale on dot
+
+preprocessing so train test split is not
+
+defined okay no worries so I will write
+
+from s k learn
+
+Dot preprocessing
+
+because here I'm going to train my model
+
+plus from from SQL under pre-processing
+
+import
+
+I hope so there is train
+
+test
+
+split let's see whether it will work or
+
+it is present in a scale under
+
+pre-processing no it is not present over
+
+there so let me Google it see I'm also
+
+human being I also forget things SK
+
+learn train test split but Google is
+
+there don't worry about that okay it is
+
+present in model selection now
+
+everything is coming in my mind okay so
+
+here instead of writing pre-processing I
+
+will write model
+
+selection done
+
+so done now I have 800 records in my
+
+training and 200 records in my test now
+
+what I've done next create an evaluation
+
+Matrix to give metrics about the model
+
+training see I will write all this code
+
+all this code I will write again and
+
+again okay when I'm doing modular coding
+
+but right now I'm just trying to show
+
+you with respect to the Eda model
+
+training okay so here in the evaluate
+
+modeling we have evaluate model we are
+
+going to take mean absolute error we are
+
+going to take mean Squad error and root
+
+mean square error R square and we are
+
+going to return all these values fine
+
+this function is there now this is super
+
+important see this is my model list
+
+right and then this is my R2 list and
+
+then I'm basically going to do the fit
+
+then I'm going to do the predict and
+
+then I'm going to find out the
+
+evaluation of the model like I may
+
+rmse and all so see this very simple and
+
+then I'm going to append all those
+
+values over here and then this is with
+
+respect to the model performance right
+
+and here is basically my R square RC
+
+guys everything I am going to do again
+
+I'm going to write this code again for
+
+you when we are doing modular coding but
+
+here since you are very much familiar
+
+with jupyter notebook since you are
+
+following my tutorials you will get an
+
+idea about it once we do this in the
+
+form of this right obviously this is
+
+very simple to understand
+
+so here you can see output exceeds the
+
+open the output data in a text editor
+
+this this this is there perfect right
+
+now if I probably go and try to see this
+
+right which is basically having the best
+
+R2 Square I'm basically displaying that
+
+okay so here you can see Ridge is
+
+basically having 88 percent linear
+
+regression 88 CAD posting regulation 85
+
+and all so I will probably go with
+
+linear regression because hardly there
+
+is hardly any difference so
+
+we go and see the accuracy of the model
+
+then we predict it done almost all the
+
+task is basically done
+
+okay so these are the tasks and we have
+
+done the prediction okay this is
+
+basically the predicted value and the
+
+difference that with respect to the
+
+actual value so this is my actual
+
+predicted and difference okay this is
+
+pretty much simple see now the reason I
+
+have shown you is that all these things
+
+we have done okay we have done train
+
+displayed we have done column
+
+Transformer we have probably gone ahead
+
+and created evaluation metrics we have
+
+trained this model everything over here
+
+I've just executed and shown it to you
+
+okay and then based on the R2 score
+
+based on the ma score Mac score we have
+
+sorted all the models right this now
+
+same thing in the going tutorial what we
+
+are going to do is that I am going to
+
+basically write everything this in the
+
+model programming way
+
+we need to understand where this model
+
+training code will come right we need to
+
+understand where this evaluate model
+
+code training will come because
+
+somewhere we'll be writing right inside
+
+this inside this Source we have created
+
+this utils file let me talk about this
+
+util files here I'll probably create my
+
+value evaluation method a technique all
+
+the functions will be over here right in
+
+the model trainer I will probably try to
+
+create all my training code that I have
+
+basically created over here
+
+finding the best model I may write it in
+
+utils.py train test split I may write it
+
+in my utils.py this kind of technique I
+
+may write it somewhere right in data
+
+ingestion I will be responsible in doing
+
+the train test plate I did the trainer
+
+split over here so where the strain test
+
+plate will come as soon as you ingest
+
+the data so we will try to put this
+
+particular code over there it's just
+
+like mapping properly which code needs
+
+to come where
+
+but it is not like see if I am saying
+
+train test split that basically means I
+
+will be directly writing Trend test
+
+split over here no nothing like that I
+
+will create a function a generic
+
+function in utils dot p y that will do
+
+Trend test split and this function will
+
+probably get called in the data
+
+ingestion so this way this is how we
+
+will try to map the entire modular
+
+coding and finally trust me you will be
+
+learning all these things
+
+and this is all the mapping that I will
+
+be doing going forward right now you
+
+will be able to see okay I've done
+
+everything in ID right
+
+so I hope you like this particular video
+
+if you like it guys uh see again it's a
+
+request share it with many people as you
+
+can this is important uh
+
+if you share it someone who's struggling
+
+to learn something right
+
+and they're not able to get some
+
+resources please do make sure that you
+
+share them with them right it'll be very
+
+much important okay
+
+so yes this was it from my side uh just
+
+let me know in the comment section how's
+
+the tutorials going on now before I go
+
+ahead and close this I will be
+
+committing the code over here so let me
+
+go ahead and write git add Dot and uh
+
+um
+
+warnings LF will be replaced by this
+
+let's see so this is my notebook cat
+
+info okay cat info and all are there
+
+okay data is also there it's okay
+
+so what I will do over here is that I
+
+will just say get status so what all
+
+things I have so all these files have
+
+been created right I will just push this
+
+all the data set okay so I will write
+
+git commit
+
+minus m
+
+and here we will be writing Eda and
+
+problem statement right
+
+so done I will go ahead and execute it
+
+done done done and finally
+
+we will go and get push minus U
+
+origin to Main
+
+Dot
+
+uh get push okay sorry
+
+minus U to origin to Min so now you will
+
+be able to see that yes it's everything
+
+is pushed now
+
+um
+
+you'll be able to see in my GitHub
+
+repository all this particular code will
+
+be there GitHub reposit is already in
+
+the description so yes in this video we
+
+have discussed about our problem
+
+statement we have discussed about EDM we
+
+have probably also trained the model now
+
+going forward we will be working
+
+completely on the modular coding part so
+
+yes this was it for my side I hope you
+
+like this particular video I'll see you
+
+all in the next video thank you take
+
+care bye bye have a great day
+

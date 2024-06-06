@@ -1,9 +1,9 @@
-#Basic import
+# Basic imports
 import os
 import sys
 from dataclasses import dataclass
 
-#modeling
+# Modeling
 from catboost import CatBoostRegressor
 from sklearn.ensemble import (
     AdaBoostRegressor,
@@ -21,7 +21,6 @@ from src.logger import logging
 
 from src.utils import save_object
 from src.utils import evaluate_models
-
 
 @dataclass
 class ModelTrainerConfig:
@@ -51,13 +50,51 @@ class ModelTrainer:
                 "XGBRegressor": XGBRegressor(),
                 "AdaBoost Regressor": AdaBoostRegressor()
             }
-            
-            model_report = evaluate_models(X_train=X_train, y_train=y_train, X_test=X_test, y_test=y_test, models=models)
+
+            params = {
+                "Decision Tree": {
+                    'criterion': ['squared_error', 'friedman_mse', 'absolute_error', 'poisson'],
+                    'splitter': ['best', 'random'],
+                    'max_features': ['sqrt', 'log2'],
+                },
+                "Random Forest Regressor": {
+                    'n_estimators': [50, 100, 200],
+                    'criterion': ['squared_error', 'absolute_error', 'poisson'],
+                    'max_features': ['sqrt', 'log2'],
+                },
+                "Gradient Boosting": {
+                    'loss': ['squared_error', 'absolute_error', 'huber', 'quantile'],
+                    'learning_rate': [0.1, 0.01, 0.05, 0.001],
+                    'subsample': [0.6, 0.7, 0.75],
+                    'n_estimators': [50, 100, 200],
+                    'criterion': ['squared_error', 'friedman_mse'],
+                },
+                "Linear Regression": {},
+                "K-Neighbors Regressor": {
+                    'n_neighbors': [3, 5, 7],
+                    'weights': ['uniform', 'distance'],
+                    'algorithm': ['auto', 'ball_tree', 'kd_tree', 'brute'],
+                },
+                "XGBRegressor": {
+                    'n_estimators': [50, 100, 200],
+                    'learning_rate': [0.01, 0.1, 0.2],
+                    'booster': ['gbtree', 'gblinear', 'dart'],
+                },
+                "AdaBoost Regressor": {
+                    'n_estimators': [50, 100, 200],
+                    'learning_rate': [0.01, 0.1, 1.0],
+                    'loss': ['linear', 'square', 'exponential'],
+                }
+            }
+
+            model_report = evaluate_models(X_train=X_train, y_train=y_train, X_test=X_test, y_test=y_test, models=models, params=params)
 
             # To get the best model score from the report
             best_model_name = max(model_report, key=lambda k: model_report[k]['test_score'])
             best_model_score = model_report[best_model_name]['test_score']
-            best_model = models[best_model_name]
+            best_model = model_report[best_model_name]['model']  # Get the fitted model
+
+            logging.info(f"Best model: {best_model_name} with test score: {best_model_score}")
 
             if best_model_score < 0.6:
                 raise CustomerException("No best model found")
@@ -75,4 +112,5 @@ class ModelTrainer:
             return r2_square
 
         except Exception as e:
+            logging.error(f"Exception occurred: {str(e)}")
             raise CustomerException(e, sys)

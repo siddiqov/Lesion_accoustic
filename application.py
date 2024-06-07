@@ -37,6 +37,8 @@ def predict_datapoint():
     
 if __name__=="__main__":
     app.run(host="0.0.0.0", debug=True)
+    #app.run(host="0.0.0.0") # this is mandatory to remove debug=True when using AWS 
+                            # and the name must be application.py instead app.py
 
 
 

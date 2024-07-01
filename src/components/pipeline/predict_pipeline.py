@@ -3,7 +3,7 @@ import pandas as pd
 from src.exception import CustomerException
 from src.utils import load_object
 from src.logger import logging
-class PredcitPipeline:
+class PredictPipeline:
     def __init__(self):
         pass
     

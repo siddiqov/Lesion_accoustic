@@ -1,5 +1,5 @@
 Lesion_Accoustic->.ebextensions
-Lesion_Accoustic->.ebextensions->oython.config
+Lesion_Accoustic->.ebextensions->python.config
 Lesion_Accoustic->artifacts
 Lesion_Accoustic->.github->workflow->deploy.yml
 Lesion_Accoustic->artifacts->data.csv
@@ -29,7 +29,14 @@ Lesion_Accoustic->application.py
 Lesion_Accoustic->requirements.txt
 Lesion_Accoustic->setup.py
 
-my applicaiton.py is "from flask import Flask, request, render_template
+my python.config is "
+option_settings:
+  aws:elasticbeanstalk:container:python:
+    WSGIPath: application.py
+
+"
+my applicaiton.py is 
+"from flask import Flask, request, render_template
 import numpy as np
 import pandas as pd
 

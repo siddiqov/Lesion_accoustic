@@ -1,7 +1,7 @@
 Lesion_Accoustic->.ebextensions
 Lesion_Accoustic->.ebextensions->oython.config
 Lesion_Accoustic->artifacts
-Lesion_Accoustic->.github->workflow
+Lesion_Accoustic->.github->workflow->deploy.yml
 Lesion_Accoustic->artifacts->data.csv
 Lesion_Accoustic->artifacts->model.pkl
 Lesion_Accoustic->artifacts->preprocessor.pkl
